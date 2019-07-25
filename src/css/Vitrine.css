@@ -1,4 +1,21 @@
 .VitrineDiv {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: left;
+
     background-color: #282C34;
+
     width: 100%;
+    padding: 8px;
+}
+
+.ButtonsDiv {
+    display: flex;
+    flex-direction: column;
+
+    align-self: flex-start;
+    position: absolute;
+
+    z-index: 99999;
 }
