@@ -1,5 +1,14 @@
 .VitrineDiv {
     display: flex;
+    flex-direction: row;
+    
+    background-color: #282C34;
+
+    width: 100%;
+}
+
+.ParentContainer {
+    display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: left;
@@ -7,15 +16,15 @@
     background-color: #282C34;
 
     width: 100%;
-    padding: 8px;
+    padding-right: 28px;
 }
 
 .ButtonsDiv {
     display: flex;
     flex-direction: column;
+    align-self: center;
 
-    position: absolute;
-    z-index: 99999;
+    padding-left: 12px;
 }
 
 .Cursor {

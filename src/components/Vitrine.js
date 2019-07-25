@@ -129,8 +129,9 @@ export class Vitrine extends Component {
                     <div className="ButtonsDiv">
                         {buttons}
                     </div>
-                    
-                    <ContainerItem state={this.state}/>
+                    <div className="ParentContainer">
+                        <ContainerItem state={this.state}/>
+                    </div>
                 </div>
         )
     }
