@@ -46,7 +46,7 @@ export class Vitrine extends Component {
         index: 0
     }
 
-    incIndex() {
+    incIndex = () => {
         let newIndex = this.state.index;
         newIndex++;
 
@@ -55,7 +55,7 @@ export class Vitrine extends Component {
         }
     }
 
-    decIndex() {
+    decIndex = () => {
         let newIndex = this.state.index;
         newIndex--;
 
