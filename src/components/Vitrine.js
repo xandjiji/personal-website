@@ -41,6 +41,18 @@ export class Vitrine extends Component {
                 title: 'item 5',
                 description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea officiis nihil, quia possimus magnam odio modi sint! Ut obcaecati nobis quibusdam unde aliquam facere, quam eligendi distinctio, nostrum architecto dolorem.',
                 img: img4
+            },
+            {
+                id: 6,
+                title: 'item6',
+                description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea officiis nihil, quia possimus magnam odio modi sint! Ut obcaecati nobis quibusdam unde aliquam facere, quam eligendi distinctio, nostrum architecto dolorem.',
+                img: img4
+            },
+            {
+                id: 7,
+                title: 'item 7',
+                description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea officiis nihil, quia possimus magnam odio modi sint! Ut obcaecati nobis quibusdam unde aliquam facere, quam eligendi distinctio, nostrum architecto dolorem.',
+                img: img4
             }
         ],
         index: 0
@@ -64,6 +76,10 @@ export class Vitrine extends Component {
         }
     }
 
+    setIndex = (cursorPosition) => {
+        this.setState({index: cursorPosition})
+    }
+
     componentDidMount() {
         window.addEventListener('wheel', this.handleScroll);
     }
@@ -80,19 +96,40 @@ export class Vitrine extends Component {
         }
     }
 
+    /* createButtons = () => {
+        let buttons = [];
+
+        let amount = (this.state.items.length / 2);
+        amount = Math.floor(amount);
+
+        for(let i = 0; i < 10; i++){
+            buttons.push(<button>{i}</button>);
+        }
+
+        return buttons;
+    } */
+
     render() {
+
+        let buttons = [];
+
+        let amount = (this.state.items.length / 2);
+        amount = Math.floor(amount);
+
+        for(let i = 0; i < amount; i++){
+            if(this.state.index === i){
+                buttons.push(<button className="CurrentCursor" key={i} onClick={() => this.setIndex(i)}></button>);
+            } else {
+                buttons.push(<button className="Cursor" key={i} onClick={() => this.setIndex(i)}></button>);
+            }
+        }
         
         return (                
                 <div className="VitrineDiv" ref="vitrine">
                     <div className="ButtonsDiv">
-                        <button
-                            onClick={() => this.decIndex()}
-                        >Up</button>
-                        <button
-                            onClick={() => this.incIndex()}
-                        >Down</button>
-
+                        {buttons}
                     </div>
+                    
                     <ContainerItem state={this.state}/>
                 </div>
         )
