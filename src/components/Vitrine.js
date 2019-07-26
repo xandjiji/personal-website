@@ -22,7 +22,7 @@ export class Vitrine extends Component {
                 id: 2,
                 title: 'item 2',
                 description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea officiis nihil, quia possimus magnam odio modi sint! Ut obcaecati nobis quibusdam unde aliquam facere, quam eligendi distinctio, nostrum architecto dolorem.',
-                img: img2
+                img: img2            
             },
             {
                 id: 3,
@@ -67,8 +67,13 @@ export class Vitrine extends Component {
                 img: img1
             }
         ],
-        index: 0
+        index: 0,
+        expanded: 0
     }
+
+    itemList = this.state.items;
+
+    previousIndex;
 
     incIndex = () => {
         let newIndex = this.state.index;
@@ -127,6 +132,26 @@ export class Vitrine extends Component {
         }
     }
 
+
+    expand = (id, index) => {
+        if(this.state.expanded === 0) {
+            let selectedItem = this.state.items[id - 1];
+
+            let newItemList = [];
+            newItemList.push(selectedItem);
+            this.setState({items: newItemList});
+            this.previousIndex = index;
+            this.setIndex(0);
+            this.setState({expanded: id});
+        }
+    }
+
+    goBack = () => {
+        this.setState({expanded: 0});
+        this.setState({index: this.previousIndex});
+        this.setState({items: this.itemList});
+    }
+
     render() {
 
         let buttons = [];
@@ -152,7 +177,7 @@ export class Vitrine extends Component {
                         {buttons}
                     </div>
                     <div className="ParentContainer">
-                        <ContainerItem state={this.state}/>
+                        <ContainerItem state={this.state} expanding={this.expand} contract={this.goBack}/>
                     </div>
                 </div>
         )
