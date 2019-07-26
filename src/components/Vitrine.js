@@ -64,7 +64,7 @@ export class Vitrine extends Component {
                 id: 9,
                 title: 'item 9',
                 description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea officiis nihil, quia possimus magnam odio modi sint! Ut obcaecati nobis quibusdam unde aliquam facere, quam eligendi distinctio, nostrum architecto dolorem.',
-                img: img5
+                img: img1
             }
         ],
         index: 0
