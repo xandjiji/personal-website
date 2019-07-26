@@ -142,7 +142,7 @@ export class Vitrine extends Component {
             if(this.state.index === i){
                 buttons.push(<button style={{background: "#ABB2BF"}} className="Cursor" key={i} onClick={() => this.setIndex(i)}></button>);
             } else {
-                buttons.push(<button style={{background: "#282C34"}} className="Cursor" key={i} onClick={() => this.setIndex(i)}></button>);
+                buttons.push(<button style={{background: "inherit"}} className="Cursor" key={i} onClick={() => this.setIndex(i)}></button>);
             }
         }
         
