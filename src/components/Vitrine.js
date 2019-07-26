@@ -44,13 +44,25 @@ export class Vitrine extends Component {
             },
             {
                 id: 6,
-                title: 'item6',
+                title: 'item 6',
                 description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea officiis nihil, quia possimus magnam odio modi sint! Ut obcaecati nobis quibusdam unde aliquam facere, quam eligendi distinctio, nostrum architecto dolorem.',
                 img: img4
             },
             {
                 id: 7,
                 title: 'item 7',
+                description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea officiis nihil, quia possimus magnam odio modi sint! Ut obcaecati nobis quibusdam unde aliquam facere, quam eligendi distinctio, nostrum architecto dolorem.',
+                img: img4
+            },
+            {
+                id: 8,
+                title: 'item 8',
+                description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea officiis nihil, quia possimus magnam odio modi sint! Ut obcaecati nobis quibusdam unde aliquam facere, quam eligendi distinctio, nostrum architecto dolorem.',
+                img: img4
+            },
+            {
+                id: 9,
+                title: 'item 9',
                 description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea officiis nihil, quia possimus magnam odio modi sint! Ut obcaecati nobis quibusdam unde aliquam facere, quam eligendi distinctio, nostrum architecto dolorem.',
                 img: img4
             }
@@ -62,8 +74,17 @@ export class Vitrine extends Component {
         let newIndex = this.state.index;
         newIndex++;
 
-        if(newIndex < ((this.state.items.length / 2) - 1)) {
-            this.setState({index: newIndex})
+        let maxIndex;
+        if(this.state.items.length < 5) {
+            maxIndex = 0;
+        } else {
+            maxIndex = Math.round(this.state.items.length / 2) - 1;
+        }
+
+        if(newIndex < maxIndex) {
+            this.setIndex(newIndex)
+        } else {
+            this.setIndex(0);
         }
     }
 
@@ -71,8 +92,18 @@ export class Vitrine extends Component {
         let newIndex = this.state.index;
         newIndex--;
 
+
+        let maxIndex;
+        if(this.state.items.length < 5) {
+            maxIndex = 0;
+        } else {
+            maxIndex = Math.round(this.state.items.length / 2) - 2;
+        }
+
         if(newIndex >= 0){
-            this.setState({index: newIndex})
+            this.setIndex(newIndex)
+        } else {
+            this.setIndex(maxIndex);
         }
     }
 
@@ -96,31 +127,22 @@ export class Vitrine extends Component {
         }
     }
 
-    /* createButtons = () => {
-        let buttons = [];
-
-        let amount = (this.state.items.length / 2);
-        amount = Math.floor(amount);
-
-        for(let i = 0; i < 10; i++){
-            buttons.push(<button>{i}</button>);
-        }
-
-        return buttons;
-    } */
-
     render() {
 
         let buttons = [];
 
-        let amount = (this.state.items.length / 2);
-        amount = Math.floor(amount);
+        let amount;
+        if(this.state.items.length > 4) {
+            amount = Math.round(this.state.items.length / 2) - 1;
+        } else {
+            amount = 0;
+        }
 
         for(let i = 0; i < amount; i++){
             if(this.state.index === i){
-                buttons.push(<button className="CurrentCursor" key={i} onClick={() => this.setIndex(i)}></button>);
+                buttons.push(<button style={{background: "#ABB2BF"}} className="Cursor" key={i} onClick={() => this.setIndex(i)}></button>);
             } else {
-                buttons.push(<button className="Cursor" key={i} onClick={() => this.setIndex(i)}></button>);
+                buttons.push(<button style={{background: "#282C34"}} className="Cursor" key={i} onClick={() => this.setIndex(i)}></button>);
             }
         }
         
