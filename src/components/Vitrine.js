@@ -40,19 +40,19 @@ export class Vitrine extends Component {
                 id: 5,
                 title: 'item 5',
                 description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea officiis nihil, quia possimus magnam odio modi sint! Ut obcaecati nobis quibusdam unde aliquam facere, quam eligendi distinctio, nostrum architecto dolorem.',
-                img: img4
+                img: img1
             },
             {
                 id: 6,
                 title: 'item 6',
                 description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea officiis nihil, quia possimus magnam odio modi sint! Ut obcaecati nobis quibusdam unde aliquam facere, quam eligendi distinctio, nostrum architecto dolorem.',
-                img: img4
+                img: img2
             },
             {
                 id: 7,
                 title: 'item 7',
                 description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea officiis nihil, quia possimus magnam odio modi sint! Ut obcaecati nobis quibusdam unde aliquam facere, quam eligendi distinctio, nostrum architecto dolorem.',
-                img: img4
+                img: img3
             },
             {
                 id: 8,
@@ -64,7 +64,7 @@ export class Vitrine extends Component {
                 id: 9,
                 title: 'item 9',
                 description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea officiis nihil, quia possimus magnam odio modi sint! Ut obcaecati nobis quibusdam unde aliquam facere, quam eligendi distinctio, nostrum architecto dolorem.',
-                img: img4
+                img: img5
             }
         ],
         index: 0
