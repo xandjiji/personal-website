@@ -68,7 +68,8 @@ export class Vitrine extends Component {
             }
         ],
         index: 0,
-        expanded: 0
+        expanded: 0,
+        buttonsOpacity: 1
     }
 
     itemList = this.state.items;
@@ -135,21 +136,17 @@ export class Vitrine extends Component {
 
     expand = (id, index) => {
         if(this.state.expanded === 0) {
-            let selectedItem = this.state.items[id - 1];
-
-            let newItemList = [];
-            newItemList.push(selectedItem);
-            this.setState({items: newItemList});
             this.previousIndex = index;
-            this.setIndex(0);
+            this.setIndex(id - 1);
             this.setState({expanded: id});
+            this.setState({buttonsOpacity: 0});
         }
     }
 
     goBack = () => {
         this.setState({expanded: 0});
         this.setState({index: this.previousIndex});
-        this.setState({items: this.itemList});
+        this.setState({buttonsOpacity: 1});
     }
 
     render() {
@@ -165,9 +162,9 @@ export class Vitrine extends Component {
 
         for(let i = 0; i < amount; i++){
             if(this.state.index === i){
-                buttons.push(<button style={{background: "#ABB2BF"}} className="Cursor" key={i} onClick={() => this.setIndex(i)}></button>);
+                buttons.push(<button style={{background: "#ABB2BF", opacity: this.state.buttonsOpacity}} className="Cursor" key={i} onClick={() => this.setIndex(i)}></button>);
             } else {
-                buttons.push(<button style={{background: "inherit"}} className="Cursor" key={i} onClick={() => this.setIndex(i)}></button>);
+                buttons.push(<button style={{background: "inherit", opacity: this.state.buttonsOpacity}} className="Cursor" key={i} onClick={() => this.setIndex(i)}></button>);
             }
         }
         
