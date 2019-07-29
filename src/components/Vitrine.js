@@ -6,6 +6,7 @@ import img2 from '../assets/img/item2.png';
 import img3 from '../assets/img/item3.png';
 import img4 from '../assets/img/item4.png';
 
+import Cursor from './Cursor';
 import ContainerItem from './ContainerItem';
 
 export class Vitrine extends Component {
@@ -150,32 +151,11 @@ export class Vitrine extends Component {
     }
 
     render() {
-
-        let buttons = [];
-
-        let amount;
-        if(this.state.items.length > 4) {
-            amount = Math.round(this.state.items.length / 2) - 1;
-        } else {
-            amount = 0;
-        }
-
-        for(let i = 0; i < amount; i++){
-            if(this.state.index === i){
-                buttons.push(<button style={{background: "#ABB2BF", opacity: this.state.buttonsOpacity}} className="Cursor" key={i} onClick={() => this.setIndex(i)}></button>);
-            } else {
-                buttons.push(<button style={{background: "inherit", opacity: this.state.buttonsOpacity}} className="Cursor" key={i} onClick={() => this.setIndex(i)}></button>);
-            }
-        }
         
-        return (                
-                <div className="VitrineDiv" ref="vitrine">
-                    <div className="ButtonsDiv">
-                        {buttons}
-                    </div>
-                    <div className="ParentContainer">
-                        <ContainerItem state={this.state} expanding={this.expand} contract={this.goBack}/>
-                    </div>
+        return (
+                <div className="VitrineDiv">
+                    <Cursor state={this.state} setIndex={this.setIndex}/>
+                    <ContainerItem state={this.state} expanding={this.expand} contract={this.goBack}/>
                 </div>
         )
     }
