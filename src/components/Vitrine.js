@@ -6,6 +6,8 @@ import img2 from '../assets/img/item2.png';
 import img3 from '../assets/img/item3.png';
 import img4 from '../assets/img/item4.png';
 
+import pokehashImg from '../assets/img/pokehash.png';
+
 import Cursor from './Cursor';
 import ContainerItem from './ContainerItem';
 
@@ -15,9 +17,12 @@ export class Vitrine extends Component {
         items: [
             {
                 id: 1,
-                title: 'item 1',
-                description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea officiis nihil, quia possimus magnam odio modi sint! Ut obcaecati nobis quibusdam unde aliquam facere, quam eligendi distinctio, nostrum architecto dolorem.',
-                img: img1
+                title: 'Pokehash',
+                description: 'A deterministic Pokémon Trainer Card generator based on the sha-256 of the user\'s name.',
+                img: pokehashImg,
+                github: 'https://github.com/xandjiji/pokehash',
+                link: 'https://xandjiji.github.io/pokehash/',
+                tags: ['p5js', 'javascript']
             },
             {
                 id: 2,

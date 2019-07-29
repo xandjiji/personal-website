@@ -27,7 +27,7 @@ export class ContainerItem extends Component {
                                 'width': width,
                                 'height': height}}
 
-                            onClick={this.props.expanding.bind(this, item.id, this.props.state.index)}>
+                            /* onClick={this.props.expanding.bind(this, item.id, this.props.state.index)} */>
 
                         <Item item={item} expanded={this.props.state.expanded} contract={this.props.contract}/>
 
