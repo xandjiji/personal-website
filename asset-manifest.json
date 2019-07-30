@@ -1,17 +1,26 @@
 {
   "files": {
-    "main.css": "/personal-website/static/css/main.3620bde4.chunk.css",
-    "main.js": "/personal-website/static/js/main.f00d227f.chunk.js",
-    "main.js.map": "/personal-website/static/js/main.f00d227f.chunk.js.map",
+    "main.css": "/personal-website/static/css/main.55b4f301.chunk.css",
+    "main.js": "/personal-website/static/js/main.f037a668.chunk.js",
+    "main.js.map": "/personal-website/static/js/main.f037a668.chunk.js.map",
     "runtime~main.js": "/personal-website/static/js/runtime~main.93f2c6c9.js",
     "runtime~main.js.map": "/personal-website/static/js/runtime~main.93f2c6c9.js.map",
-    "static/js/2.5b363b31.chunk.js": "/personal-website/static/js/2.5b363b31.chunk.js",
-    "static/js/2.5b363b31.chunk.js.map": "/personal-website/static/js/2.5b363b31.chunk.js.map",
+    "static/js/2.def297ae.chunk.js": "/personal-website/static/js/2.def297ae.chunk.js",
+    "static/js/2.def297ae.chunk.js.map": "/personal-website/static/js/2.def297ae.chunk.js.map",
     "index.html": "/personal-website/index.html",
-    "precache-manifest.0f6d11d514b22c125dc9e5f52363079a.js": "/personal-website/precache-manifest.0f6d11d514b22c125dc9e5f52363079a.js",
+    "precache-manifest.bd1efa93633811bfbc4bc60539cd0dde.js": "/personal-website/precache-manifest.bd1efa93633811bfbc4bc60539cd0dde.js",
     "service-worker.js": "/personal-website/service-worker.js",
-    "static/css/main.3620bde4.chunk.css.map": "/personal-website/static/css/main.3620bde4.chunk.css.map",
+    "static/css/main.55b4f301.chunk.css.map": "/personal-website/static/css/main.55b4f301.chunk.css.map",
+    "static/media/edgedetection.png": "/personal-website/static/media/edgedetection.77be44b5.png",
+    "static/media/generativeart.png": "/personal-website/static/media/generativeart.fffe974c.png",
     "static/media/Item.css": "/personal-website/static/media/youtube.2c2eb485.svg",
-    "static/media/pokehash.png": "/personal-website/static/media/pokehash.8591c2e5.png"
+    "static/media/hextech0xff20.png": "/personal-website/static/media/hextech0xff20.a3a1e5cb.png",
+    "static/media/jogodavelha.png": "/personal-website/static/media/jogodavelha.095e21a3.png",
+    "static/media/pokehash.png": "/personal-website/static/media/pokehash.8591c2e5.png",
+    "static/media/pokemontwitterbot.png": "/personal-website/static/media/pokemontwitterbot.4e44144e.png",
+    "static/media/tboimod.png": "/personal-website/static/media/tboimod.cd1958ad.png",
+    "static/media/thecoverproject.png": "/personal-website/static/media/thecoverproject.d36526f8.png",
+    "static/media/thecoverprojectbot.png": "/personal-website/static/media/thecoverprojectbot.2e16651f.png",
+    "static/media/tibiaclips.png": "/personal-website/static/media/tibiaclips.9a39b5e5.png"
   }
 }
