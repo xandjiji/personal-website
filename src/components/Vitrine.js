@@ -1,12 +1,7 @@
 import React, { Component } from 'react'
 import '../css/Vitrine.css';
 
-import img1 from '../assets/img/item1.png';
-import img2 from '../assets/img/item2.png';
-import img3 from '../assets/img/item3.png';
-import img4 from '../assets/img/item4.png';
-
-import pokehashImg from '../assets/img/pokehash.png';
+import data from '../data'
 
 import Cursor from './Cursor';
 import ContainerItem from './ContainerItem';
@@ -14,65 +9,7 @@ import ContainerItem from './ContainerItem';
 export class Vitrine extends Component {
 
     state = {
-        items: [
-            {
-                id: 1,
-                title: 'Pokehash',
-                description: 'A deterministic Pokémon Trainer Card generator based on the sha-256 of the user\'s name.',
-                img: pokehashImg,
-                github: 'https://github.com/xandjiji/pokehash',
-                link: 'https://xandjiji.github.io/pokehash/',
-                tags: ['p5js', 'javascript']
-            },
-            {
-                id: 2,
-                title: 'item 2',
-                description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea officiis nihil, quia possimus magnam odio modi sint! Ut obcaecati nobis quibusdam unde aliquam facere, quam eligendi distinctio, nostrum architecto dolorem.',
-                img: img2            
-            },
-            {
-                id: 3,
-                title: 'item 3',
-                description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea officiis nihil, quia possimus magnam odio modi sint! Ut obcaecati nobis quibusdam unde aliquam facere, quam eligendi distinctio, nostrum architecto dolorem.',
-                img: img3
-            },
-            {
-                id: 4,
-                title: 'item 4',
-                description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea officiis nihil, quia possimus magnam odio modi sint! Ut obcaecati nobis quibusdam unde aliquam facere, quam eligendi distinctio, nostrum architecto dolorem.',
-                img: img4
-            },
-            {
-                id: 5,
-                title: 'item 5',
-                description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea officiis nihil, quia possimus magnam odio modi sint! Ut obcaecati nobis quibusdam unde aliquam facere, quam eligendi distinctio, nostrum architecto dolorem.',
-                img: img1
-            },
-            {
-                id: 6,
-                title: 'item 6',
-                description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea officiis nihil, quia possimus magnam odio modi sint! Ut obcaecati nobis quibusdam unde aliquam facere, quam eligendi distinctio, nostrum architecto dolorem.',
-                img: img2
-            },
-            {
-                id: 7,
-                title: 'item 7',
-                description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea officiis nihil, quia possimus magnam odio modi sint! Ut obcaecati nobis quibusdam unde aliquam facere, quam eligendi distinctio, nostrum architecto dolorem.',
-                img: img3
-            },
-            {
-                id: 8,
-                title: 'item 8',
-                description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea officiis nihil, quia possimus magnam odio modi sint! Ut obcaecati nobis quibusdam unde aliquam facere, quam eligendi distinctio, nostrum architecto dolorem.',
-                img: img4
-            },
-            {
-                id: 9,
-                title: 'item 9',
-                description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea officiis nihil, quia possimus magnam odio modi sint! Ut obcaecati nobis quibusdam unde aliquam facere, quam eligendi distinctio, nostrum architecto dolorem.',
-                img: img1
-            }
-        ],
+        items: data.items,
         index: 0,
         expanded: 0,
         buttonsOpacity: 1

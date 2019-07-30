@@ -16,16 +16,16 @@ export class Item extends Component {
             links.push(<a href={this.props.item.link} className="Svg" id="LinkSvg" target="_blank" rel="noopener noreferrer"> </a>)
         }
 
-        if(this.props.item.github) {
-            links.push(<a href={this.props.item.github} className="Svg" id="GithubSvg" target="_blank" rel="noopener noreferrer"> </a>)
-        }
-
         if(this.props.item.twitter) {
             links.push(<a href={this.props.item.twitter} className="Svg" id="TwitterSvg" target="_blank" rel="noopener noreferrer"> </a>)
         }
 
         if(this.props.item.youtube) {
             links.push(<a href={this.props.item.youtube} className="Svg" id="YoutubeSvg" target="_blank" rel="noopener noreferrer"> </a>)
+        }
+
+        if(this.props.item.github) {
+            links.push(<a href={this.props.item.github} className="Svg" id="GithubSvg" target="_blank" rel="noopener noreferrer"> </a>)
         }
 
         let tags = [];
