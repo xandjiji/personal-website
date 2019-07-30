@@ -1,56 +1,31 @@
 import React, { Component } from 'react'
 import '../css/Item.css';
 
-import link from '../assets/svg/link.svg'
-import github from '../assets/svg/github.svg'
-import twitter from '../assets/svg/twitter.svg'
-import youtube from '../assets/svg/youtube.svg'
-
 export class Item extends Component {
     render() {
 
         let button;
 
         if(this.props.expanded > 0) {
-            button = <button className="BackButton" onClick={this.props.contract}></button>
+            button = <button className="BackButton" onClick={this.props.contract}>BACK</button>
         }
 
         let links = []
 
         if(this.props.item.link) {
-            links.push(
-                <div className="LinkBox">
-                    <img src={link} className="Svg" alt=""/>
-                    <a href={this.props.item.link} target="_blank" rel="noopener noreferrer">Check it out</a>
-                </div>
-                )
+            links.push(<a href={this.props.item.link} className="Svg" id="LinkSvg" target="_blank" rel="noopener noreferrer"> </a>)
         }
 
         if(this.props.item.github) {
-            links.push(
-                <div className="LinkBox">
-                    <img src={github} className="Svg" alt=""/>
-                    <a href={this.props.item.github} target="_blank" rel="noopener noreferrer">Check it out</a>
-                </div>
-                )
+            links.push(<a href={this.props.item.github} className="Svg" id="GithubSvg" target="_blank" rel="noopener noreferrer"> </a>)
         }
 
         if(this.props.item.twitter) {
-            links.push(
-                <div className="LinkBox">
-                    <img src={twitter} className="Svg" alt=""/>
-                    <a href={this.props.item.twitter} target="_blank" rel="noopener noreferrer">Check it out</a>
-                </div>
-                )
+            links.push(<a href={this.props.item.twitter} className="Svg" id="TwitterSvg" target="_blank" rel="noopener noreferrer"> </a>)
         }
 
         if(this.props.item.youtube) {
-            links.push(
-                <div className="LinkBox">
-                    <img src={youtube} className="Svg" alt=""/>
-                    <a href={this.props.item.youtube} target="_blank" rel="noopener noreferrer">Check it out</a>
-                </div>
-                )
+            links.push(<a href={this.props.item.youtube} className="Svg" id="YoutubeSvg" target="_blank" rel="noopener noreferrer"> </a>)
         }
 
         let tags = [];
@@ -74,8 +49,14 @@ export class Item extends Component {
                     <br/>
                     <p>{this.props.item.description}</p>
                     <br/>
-                    {links}
-                    {tags}
+
+                    <div className="LinkBox">
+                        {links}
+                    </div>
+
+                    <div className="TagBox">
+                        {tags}
+                    </div>
                 </div>
             </div>
         )

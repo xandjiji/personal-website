@@ -2,7 +2,6 @@
     border-width: 2px;
     border-style: solid;
     border-color: #ABB2BF;
-    border-radius: 12px;
 
     width: 100%;
     height: 100%;
@@ -17,8 +16,6 @@
 
 img {
     object-fit: cover;
-    object-position: 0%;
-    border-radius: 12px 0px 0px 12px;
 }
 
 .ItemTxt {
@@ -37,24 +34,55 @@ h2 {
     height: 50px;
 }
 
-.Svg {
-    max-width: 32px;
-    max-height: 32px;
-}
+
+/* LINKS AND SVGS */
 
 .LinkBox {
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding-bottom: 6px;
-
+    padding-bottom: 16px;
 }
 
-.LinkBox a {
-    padding: 6px;
-    text-decoration: none;
+.Svg {
+    display: flex;
+    width: 32px;
+    height: 32px;
+    margin-right: 12px;
+}
+
+#LinkSvg {
+    background: url(../assets/svg/link.svg);
+}
+
+#GithubSvg {
+    background: url(../assets/svg/github.svg);
+}
+
+#TwitterSvg {
+    background: url(../assets/svg/twitter.svg);
+}
+
+#YoutubeSvg {
+    background: url(../assets/svg/youtube.svg);
+}
+
+
+/* TAGS */
+
+.TagBox {
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 16px;
 }
 
 .Tag {
-    background-color: green;
+    background-color: #24242E;
+    width: fit-content;
+    padding: 5px;
+    margin-right: 12px;
+    margin-bottom: 12px;
+
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 8px;
+    border-color: #ABB2BF;
 }
