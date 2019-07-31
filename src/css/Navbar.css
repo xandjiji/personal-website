@@ -13,3 +13,9 @@
 #logoID {
     padding: 16px;
 }
+
+@media (max-width: 1650px) {
+    .Sidebar {
+        display: none;
+    }
+}
