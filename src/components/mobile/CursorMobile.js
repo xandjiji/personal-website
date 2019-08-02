@@ -22,7 +22,7 @@ export class CursorMobile extends Component {
         }
 
         return (
-            <div className="ButtonsDiv">
+            <div className=".ButtonsMobileDiv">
                 {buttons}
             </div>
         )

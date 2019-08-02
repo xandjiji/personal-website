@@ -1,7 +1,6 @@
-.ButtonsDiv {
+.ButtonsMobileDiv {
     display: flex;
-    flex-direction: column;
-    align-self: center;
+    flex-direction: row;
 
     padding-left: 12px;
 }
