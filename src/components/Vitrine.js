@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import '../css/Vitrine.css';
+import colors from '../colors'
 
 import data from '../data'
 
@@ -95,7 +96,7 @@ export class Vitrine extends Component {
     render() {
         
         return (
-                <div className="VitrineDiv">
+                <div className="VitrineDiv" style={{'background-color' : colors.darkTheme.background}}>
                     <Cursor state={this.state} setIndex={this.setIndex}/>
                     <ContainerItem state={this.state} expanding={this.expand} contract={this.goBack}/>
                 </div>

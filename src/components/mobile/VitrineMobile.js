@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import '../../css/mobile/VitrineMobile.css';
+import colors from '../../colors'
 
 import data from '../../data'
 
@@ -84,7 +85,7 @@ export class VitrineMobile extends Component {
     render() {
         
         return (
-                <div className="VitrineMobileDiv">
+                <div className="VitrineMobileDiv" style={{'background-color' : colors.darkTheme.background}}>
                     <CursorMobile state={this.state} setIndex={this.setIndex}/>
                     <ContainerItemMobile state={this.state} expanding={this.expand} contract={this.goBack}/>
                 </div>

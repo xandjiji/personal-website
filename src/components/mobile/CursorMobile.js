@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import '../../css/mobile/CursorMobile.css';
+import colors from '../../colors'
 
 export class CursorMobile extends Component {
     render() {
@@ -15,7 +16,7 @@ export class CursorMobile extends Component {
 
         for(let i = 0; i < amount; i++){
             if(this.props.state.index === i){
-                buttons.push(<button style={{background: "#ABB2BF", opacity: this.props.state.buttonsOpacity}} className="Cursor" key={i} onClick={() => this.props.setIndex(i)}></button>);
+                buttons.push(<button style={{background: colors.darkTheme.font, opacity: this.props.state.buttonsOpacity}} className="Cursor" key={i} onClick={() => this.props.setIndex(i)}></button>);
             } else {
                 buttons.push(<button style={{background: "inherit", opacity: this.props.state.buttonsOpacity}} className="Cursor" key={i} onClick={() => this.props.setIndex(i)}></button>);
             }

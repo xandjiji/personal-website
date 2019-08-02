@@ -13,7 +13,7 @@
     margin-bottom: 2px;
 
     border-radius: 50%;
-    border: 2px solid #ABB2BF;
+    border: 2px solid;
     outline: none;
 
     transition: background 100ms cubic-bezier(0.455, 0.03, 0.515, 0.955);

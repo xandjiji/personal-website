@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import '../css/Item.css';
+import colors from '../colors'
 
 export class Item extends Component {
     render() {
@@ -33,21 +34,27 @@ export class Item extends Component {
         if(this.props.item.tags) {
             for(let i = 0; i < this.props.item.tags.length; i++) {
                 tags.push(
-                    <div className="Tag">{this.props.item.tags[i]}</div>
+                    <div className="Tag" style={{'background-color': colors.darkTheme.navbar, 'border-color': colors.darkTheme.font, 'color': colors.darkTheme.font}}>
+                        {this.props.item.tags[i]}
+                    </div>
                 )
             }
         }
 
         return (
-            <div className="Box">
+            <div className="Box" style={{'border-color': colors.darkTheme.font}}>
                 <img className="ItemImg" src={this.props.item.img} alt=""/>
 
                     {button}
 
                 <div className="ItemTxt">
-                    <h2>{this.props.item.title}</h2>
+                    <h2 style={{'color': colors.darkTheme.font}}>
+                        {this.props.item.title}
+                    </h2>
                     <br/>
-                    <p>{this.props.item.description}</p>
+                    <p style={{'color': colors.darkTheme.font}}>
+                        {this.props.item.description}
+                    </p>
                     <br/>
 
                     <div className="LinkBox">
